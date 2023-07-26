@@ -1,6 +1,6 @@
 module "modules" {
   source  = "app.terraform.io/Rajhi-Kist/modules/aws"
-  version = "0.0.0"
+  version = "0.0.1"
 
   vpc_cidr_block                                      = var.vpc_cidr_block
   env                                                 = var.env
