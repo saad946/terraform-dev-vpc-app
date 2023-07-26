@@ -19,6 +19,10 @@ module "dev-vpc" {
   backup_plan_schedule                                = var.backup_plan_schedule
   aurora_backup_plan_schedule                         = var.aurora_backup_plan_schedule
   backup_retention_period                             = var.backup_retention_period
+  master_username                                     = var.master_username
+  master_password                                     = var.master_password
+  password                                            = var.password
+  username                                            = var.username
   preferred_maintenance_window                        = var.preferred_maintenance_window
   auto_minor_version_upgrade                          = var.auto_minor_version_upgrade
   master_username                                     = var.master_username
