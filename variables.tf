@@ -71,24 +71,37 @@ variable "monitoring_interval" {
   default     = 0 # Set a default value or adjust according to your requirements
 }
 
-
 variable "instance_class" {
   description = "Instance type to use"
   type        = string
 }
+variable "password" {
+  type        = string
+  description = "RDS password"
+}
+variable "username" {
+  type        = string
+  description = "RDS username"
+}
 
+variable "master_password" {
+  type        = string
+  description = "RDS master_name"
+}
+variable "master_username" {
+  type        = string
+  description = "RDS rmaster_password"
+}
 variable "backup_plan_schedule" {
   type        = string
   description = "A CRON expression specifying when AWS Backup initiates a backup job"
   default     = "cron(0 12 * * ? *)"
 }
 
-
 variable "aurora_backup_plan_schedule" {
   description = "Description of the aurora_backup_plan_schedule variable"
   type        = string
 }
-
 
 variable "backup_retention_period" {
   type        = number
@@ -104,12 +117,6 @@ variable "preferred_maintenance_window" {
 variable "auto_minor_version_upgrade" {
   description = "Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window"
   type        = bool
-}
-
-variable "master_username" {
-  description = "The master username for the database"
-  type        = string
-  default     = "postgres"
 }
 
 variable "account_id" {
