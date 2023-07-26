@@ -25,7 +25,6 @@ module "dev-vpc" {
   username                                            = var.username
   preferred_maintenance_window                        = var.preferred_maintenance_window
   auto_minor_version_upgrade                          = var.auto_minor_version_upgrade
-  master_username                                     = var.master_username
   account_id                                          = var.account_id
   admin_sso_role_name                                 = var.admin_sso_role_name
   workers_roles                                       = var.workers_roles
